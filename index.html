@@ -11,18 +11,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* ---- Palette Vert Forêt sombre + or ---- */
-    --nuit:#0b1711;        /* fond forêt profond */
-    --nuit-1:#0f1f17;
-    --nuit-2:#15291d;      /* panneaux */
-    --encre:#eef3ea;       /* texte principal, contraste élevé */
-    --encre-doux:#c6d3bf;  /* texte secondaire, demeure lisible */
-    --or:#d2b572;          /* or chaud (accent principal) */
-    --or-clair:#ecd49a;
-    --feuille:#88c89c;     /* vert feuille lumineux (accent secondaire) */
-    --feuille-vif:#a2dab2;
-    --filet:rgba(210,181,114,.28);
-    --filet-fort:rgba(210,181,114,.52);
+    /* ---- Palette Noir + orange ---- */
+    --nuit:#0a0a0a;        /* fond noir profond */
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;      /* panneaux */
+    --encre:#f3f0ec;       /* texte principal, contraste élevé */
+    --encre-doux:#c9c2ba;  /* texte secondaire, demeure lisible */
+    --or:#e8843c;          /* orange chaud (accent principal) */
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;     /* ambre lumineux (accent secondaire) */
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
     /* Largeur de contenu proportionnelle : ~80% de l'écran sur grand écran,
        plancher 58rem pour que mobile/tablette gardent une lecture confortable */
     --max:max(58rem,80vw);
@@ -43,9 +43,9 @@
     color:var(--encre);
     background:var(--nuit);
     background-image:
-      radial-gradient(120% 80% at 50% -10%, rgba(136,200,156,.13), transparent 55%),
-      radial-gradient(90% 60% at 85% 8%, rgba(210,181,114,.06), transparent 60%),
-      radial-gradient(100% 70% at 12% 35%, rgba(40,92,60,.30), transparent 58%);
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
     background-attachment:fixed;
     overflow-x:hidden;
   }
@@ -65,17 +65,17 @@
   a{color:var(--feuille);text-decoration:none;}
   a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
 
-  ::selection{background:rgba(210,181,114,.34);color:#fff;}
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
   ::-webkit-scrollbar{width:12px;}
   ::-webkit-scrollbar-track{background:var(--nuit);}
-  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#8a7339);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
   ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
 
   /* ---- Barre de progression ---- */
   .progress{
     position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
     background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
-    box-shadow:0 0 12px rgba(210,181,114,.6);
+    box-shadow:0 0 12px rgba(232,132,60,.6);
     transition:width .1s linear;
   }
 
@@ -84,7 +84,7 @@
     position:fixed;top:0;left:0;right:0;z-index:50;
     display:flex;align-items:center;gap:1.5rem;
     padding:.85rem clamp(1rem,4vw,2.5rem);
-    background:rgba(11,23,17,.82);
+    background:rgba(10,10,10,.82);
     backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
     border-bottom:1px solid var(--filet);
     transform:translateY(-110%);
@@ -95,9 +95,13 @@
   .nav__progress{
     position:absolute;left:0;bottom:-1px;height:2px;width:0;
     background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
-    box-shadow:0 0 10px rgba(210,181,114,.55);
+    box-shadow:0 0 10px rgba(232,132,60,.55);
     transition:width .1s linear;
   }
+  .nav__logo{
+    flex:none;display:block;
+  }
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
   .nav__brand{
     font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
     letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
@@ -150,10 +154,10 @@
     line-height:1;letter-spacing:.04em;margin:0;
     /* Espace bas/côtés pour que les jambages du J et du q ne soient pas rognés par background-clip:text */
     padding:.06em .08em .2em;
-    background:linear-gradient(176deg,#f6e8c2 0%,var(--or-clair) 45%,var(--or) 100%);
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
     -webkit-background-clip:text;background-clip:text;
     color:transparent;-webkit-text-fill-color:transparent;
-    filter:drop-shadow(0 0 34px rgba(136,200,156,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
   }
   .ornament{
     display:flex;align-items:center;justify-content:center;gap:1rem;
@@ -216,7 +220,7 @@
     font-family:"Cormorant Garamond",serif;font-weight:500;
     font-size:clamp(2.8rem,2rem + 3vw,4.2rem);line-height:1;
     color:var(--or);letter-spacing:.05em;margin-bottom:.4rem;
-    filter:drop-shadow(0 0 22px rgba(210,181,114,.28));
+    filter:drop-shadow(0 0 22px rgba(232,132,60,.28));
   }
   .sec-num::before,.sec-num::after{
     content:"";width:clamp(1.6rem,6vw,3rem);height:1px;
@@ -242,7 +246,7 @@
   }
 
   .lead{
-    font-size:1.22em;line-height:1.72;color:#f4f8f0;
+    font-size:1.22em;line-height:1.72;color:#faf3ec;
     font-weight:500;
     border-left:3px solid var(--or);
     padding-left:1.3rem;margin:0 0 2.2rem;
@@ -254,7 +258,7 @@
     float:left;font-size:3.6em;line-height:.66;
     padding:.06em .14em 0 0;margin-top:.04em;
     color:var(--or-clair);
-    text-shadow:0 0 22px rgba(210,181,114,.32);
+    text-shadow:0 0 22px rgba(232,132,60,.32);
   }
 
   /* ---- Points de forme structurés (repérage rapide) ---- */
@@ -267,7 +271,7 @@
   .points li::before{
     content:"\25C6";position:absolute;left:.2rem;top:.55em;
     font-size:.6em;color:var(--or);
-    filter:drop-shadow(0 0 8px rgba(210,181,114,.4));
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
   }
   .points b{color:var(--or-clair);font-weight:600;}
 
@@ -288,7 +292,7 @@
   .verse{
     position:relative;margin:0 0 1.1rem;
     padding:1.3rem 1.4rem 1.3rem 1.6rem;
-    background:linear-gradient(180deg,rgba(136,200,156,.07),rgba(136,200,156,.03));
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
     border:1px solid var(--filet);border-left:3px solid var(--or);
     border-radius:0 5px 5px 0;
     transition:border-left-color .3s,transform .3s,background .3s;
@@ -327,7 +331,12 @@
     position:relative;z-index:2;text-align:center;
     border-top:1px solid var(--filet);
     margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
-    background:linear-gradient(180deg,transparent,rgba(15,31,23,.7));
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
   }
   .footer__church{
     font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
@@ -373,6 +382,9 @@
 
 <header class="nav" id="nav">
   <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg — haut de page">
+    <img src="LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
   <span class="nav__brand">Jacques</span>
   <nav class="nav__links" aria-label="Sections">
     <a href="#intro">Introduction</a>
@@ -580,7 +592,7 @@
       <li><b>Avertissement aux riches oppresseurs.</b> Le chapitre s'ouvre par un avertissement sévère, à la manière des prophètes, contre les riches oppresseurs (5.1-6). Ces hommes ont retenu le salaire des ouvriers qui ont moissonné leurs champs, et ce salaire volé crie vers Dieu. Jacques ne les appelle pas «&nbsp;frères&nbsp;» et ne les invite pas à se repentir : ce sont des oppresseurs du dehors dont le jugement est annoncé.</li>
       <li><b>La richesse ne sauve pas.</b> Le point fort est que leur richesse amassée ne les sauvera pas. L'or qui se rouille et les habits rongés par les mites témoigneront contre eux au jour du jugement. La richesse n'est pas condamnée en elle-même, mais le cœur qui s'y confie et qui écrase le faible pour l'accumuler.</li>
       <li><b>Patienter comme le cultivateur.</b> À partir du verset 7, Jacques se tourne vers ses «&nbsp;frères&nbsp;» avec un «&nbsp;donc&nbsp;» décisif : puisque Dieu jugera l'injustice, l'opprimé n'a pas à se venger, il doit patienter. Comme le cultivateur attend la pluie qu'il ne peut commander, le croyant tient bon, «&nbsp;car l'avènement du Seigneur est proche&nbsp;» (5.8) et «&nbsp;le juge est à la porte&nbsp;» (5.9). Job, qui se plaignit mais ne lâcha jamais Dieu, en est l'exemple : la patience biblique n'est pas un calme surhumain, c'est le refus d'abandonner la foi.</li>
-      <li><b>Le retour du Seigneur : deux lectures.</b> Sur ce retour du Seigneur, John MacArthur, dans la ligne du Master's Seminary, prêche un retour imminent lu dans un cadre dispensationaliste et prémillénariste, qui distingue Israël et l'Église et attend un règne terrestre à venir. Pour MacArthur, ce prémillénarisme n'est pas une option parmi d'autres, mais le fruit d'une herméneutique littérale tenue jusqu'au bout ; il y joint l'attente d'un enlèvement de l'Église avant la grande tribulation. La Confession baptiste de 1689, de tradition covenantale et largement amillénariste, confesse la même imminence et la même responsabilité du croyant, mais voit l'Église comme le peuple unique de la nouvelle alliance, sans ce calendrier détaillé. Les deux retiennent l'essentiel : Christ revient, le jugement est certain, et le croyant attend en veillant.</li>
+      <li><b>Le retour du Seigneur : deux lectures.</b> Sur ce retour du Seigneur, l'église EBC (même position que John MacArthur), prêche un retour imminent lu dans un cadre dispensationaliste et prémillénariste, qui distingue Israël et l'Église et attend un règne terrestre à venir. Pour MacArthur, ce prémillénarisme n'est pas une option parmi d'autres, mais le fruit d'une herméneutique littérale tenue jusqu'au bout ; il y joint l'attente d'un enlèvement de l'Église avant la grande tribulation. </li>
       <li><b>La prière dans chaque saison.</b> La dernière section (5.13-20) place la prière dans chaque saison : que celui qui souffre prie, que celui qui est joyeux chante, que le malade fasse venir les anciens. L'onction d'huile et «&nbsp;la prière de la foi&nbsp;» (5.15) ne sont ni une guérison miraculeuse garantie ni l'extrême-onction du mourant : c'est un soin pastoral ordinaire remis à la volonté souveraine de Dieu, qui peut répondre oui, non ou pas encore. Élie, «&nbsp;homme de la même nature que nous&nbsp;» (5.17), pria et fut exaucé, preuve que Dieu écoute les siens, même ordinaires.</li>
       <li><b>Ramener celui qui s'égare.</b> La lettre s'achève sans salutation, sur un envoi : aller rechercher celui qui s'égare de la vérité pour le ramener. Cette restauration fraternelle «&nbsp;sauvera une âme de la mort&nbsp;» (5.20). Loin de contredire la persévérance des saints, elle en est l'un des moyens : Dieu garde les siens, et il les garde souvent par un frère qui va chercher celui qui dérive.</li>
     </ul>
@@ -607,9 +619,9 @@
     </div>
     <p class="lead">D'un bout à l'autre, Jacques pose une seule question, et c'est aussi la nôtre : votre foi est-elle vivante ? Une foi vivante ne reste jamais les bras croisés ; elle se prouve par ses fruits, de l'épreuve jusqu'à la prière.</p>
     <ul class="points">
-      <li><b>Le chemin parcouru.</b> Rappelons le chemin parcouru. Tout commence au banc d'épreuve du chapitre 1, où la foi est éprouvée avant d'être prouvée, puis s'élève vers le sommet du livre, la foi qui agit du chapitre 2, le cœur de toute l'épître.</li>
+      <li><b>Le chemin parcouru.</b> Tout commence au banc d'épreuve du chapitre 1, où la foi est éprouvée avant d'être prouvée, puis s'élève vers le sommet du livre, la foi qui agit du chapitre 2, le cœur de toute l'épître.</li>
       <li><b>La grâce au point le plus bas.</b> De là, Jacques redescend dans le concret de la vie : la langue qui révèle le cœur, les deux sagesses, l'argent, les conflits. Le point le plus bas est l'appel à s'abaisser devant Dieu, et c'est précisément là que jaillit la grâce : «&nbsp;Dieu résiste aux orgueilleux, mais il fait grâce aux humbles&nbsp;» (Jacques 4.6).</li>
-      <li><b>L'espérance du retour.</b> Le livre ne se termine pas sur un effort à fournir, mais sur l'espérance : «&nbsp;l'avènement du Seigneur est proche&nbsp;» et «&nbsp;le juge se tient à la porte&nbsp;» (Jacques 5.8-9). Avec John MacArthur, nous y entendons le retour imminent et personnel du Seigneur ; la Confession baptiste de 1689 lit la même attente sans le cadre prémillénariste, mais tous tiennent ensemble cette certitude : Christ revient, et son retour appelle la patience et la sainteté.</li>
+      <li><b>L'espérance du retour.</b> Le livre ne se termine pas sur un effort à fournir, mais sur l'espérance : «&nbsp;l'avènement du Seigneur est proche&nbsp;» et «&nbsp;le juge se tient à la porte&nbsp;» (Jacques 5.8-9). C'est une vérité biblique : Christ revient, et son retour appelle la patience et la sainteté.</li>
       <li><b>Une foi qui n'est pas privée.</b> L'épître s'achève alors sur une communauté qui prie dans toutes les saisons et qui va rechercher celui qui s'égare (Jacques 5.16-20). La foi vivante n'est pas une affaire privée ; elle veille les uns sur les autres.</li>
       <li><b>La leçon centrale.</b> Voilà la leçon centrale, et elle réconcilie Jacques avec l'apôtre Paul. Paul explique comment un pécheur est déclaré juste devant Dieu : par la foi seule, sans les œuvres. Jacques décrit la nature de cette foi qui sauve : une foi vivante produit toujours des œuvres, tandis qu'«&nbsp;une foi sans œuvres est morte&nbsp;» (Jacques 2.17).</li>
       <li><b>Revenir à Christ.</b> L'appel final n'est donc pas de redoubler d'effort moral, mais de revenir à Christ. C'est son Esprit qui produit nécessairement le fruit chez ceux qui sont vraiment unis à lui ; la vraie religion se voit alors dans une vie changée (Jacques 1.27).</li>
@@ -619,6 +631,7 @@
 </main>
 
 <footer class="footer">
+  <img class="footer__logo" src="LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
   <p class="footer__church">Église Baptiste de Charlesbourg</p>
   <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
   <p class="footer__line">Série «&nbsp;La foi qui agit&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
