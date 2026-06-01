@@ -89,6 +89,13 @@
     transition:transform .45s cubic-bezier(.2,.7,.2,1);
   }
   .nav.show{transform:translateY(0);}
+  /* Barre de progression de lecture, intégrée au bas de la navigation */
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(210,181,114,.55);
+    transition:width .1s linear;
+  }
   .nav__brand{
     font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
     letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
@@ -246,6 +253,23 @@
     text-shadow:0 0 22px rgba(210,181,114,.32);
   }
 
+  /* ---- Points de forme structurés (repérage rapide) ---- */
+  .points{list-style:none;margin:0 0 2.2rem;padding:0;}
+  .points li{
+    position:relative;margin:0 0 1.5rem;padding-left:2rem;
+    text-wrap:pretty;
+  }
+  .points li:last-child{margin-bottom:0;}
+  .points li::before{
+    content:"\25C6";position:absolute;left:.2rem;top:.55em;
+    font-size:.6em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(210,181,114,.4));
+  }
+  .points b{color:var(--or-clair);font-weight:600;}
+
+  /* ---- Texte justifié (lecture confortable, gauche et droite) ---- */
+  .lead,.points li{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+
   /* ---- Versets ---- */
   .verses{margin:2.4rem 0;}
   .verse{
@@ -287,22 +311,6 @@
     width:3.5rem;height:1px;margin:1.6rem auto 0;
     background:var(--filet-fort);
   }
-
-  /* ---- Pour vous ---- */
-  .pour-vous{
-    margin-top:2.6rem;padding:1.8rem 1.9rem;
-    background:rgba(21,41,29,.6);
-    border:1px solid var(--filet);border-radius:6px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
-  }
-  .pour-vous__title{
-    display:flex;align-items:center;gap:.6rem;margin:0 0 .8rem;
-    font-family:"EB Garamond",serif;
-    font-size:.95rem;letter-spacing:.26em;text-transform:uppercase;
-    color:var(--or);font-weight:600;
-  }
-  .pour-vous__title::before{content:"\2767";font-size:1.1rem;line-height:1;color:var(--or);}
-  .pour-vous p{margin:0;color:var(--encre);}
 
   /* ---- Séparateur ---- */
   .divider{
@@ -369,6 +377,7 @@
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
   <span class="nav__brand">Jacques</span>
   <nav class="nav__links" aria-label="Sections">
     <a href="#intro">Introduction</a>
@@ -390,7 +399,7 @@
     <h1 class="hero__title">Jacques</h1>
     <div class="ornament" aria-hidden="true"><span>◆</span></div>
     <p class="hero__verse">
-      <span class="q">«</span> Si quelqu'un croit être religieux, sans tenir sa langue en bride, mais en trompant son cœur, la religion de cet homme est vaine. La religion pure et sans tache, devant Dieu notre Père, consiste à visiter les orphelins et les veuves dans leurs afflictions, et à se préserver des souillures du monde. <span class="q">»</span>
+      <span class="q">«</span>&nbsp;Si quelqu'un croit être religieux, sans tenir sa langue en bride, mais en trompant son cœur, la religion de cet homme est vaine. La religion pure et sans tache, devant Dieu notre Père, consiste à visiter les orphelins et les veuves dans leurs afflictions, et à se préserver des souillures du monde.&nbsp;<span class="q">»</span>
     </p>
     <p class="hero__ref">Jacques 1.26-27 · NEG</p>
     <p class="hero__series">Série : <b>La foi qui agit</b></p>
@@ -405,17 +414,17 @@
       <p class="ref">Jacques 1.1</p>
     </header>
     <p class="lead">Bienvenue dans l'épître de Jacques, une courte lettre du Nouveau Testament d'une force étonnante. En quelques pages, elle pose une seule question, toute simple et redoutable : votre foi se voit-elle dans votre vie ?</p>
-    <div class="body">
-      <p>Peu de livres de la Bible ont été autant discutés que cette courte lettre. Martin Luther lui-même la jugeait avec méfiance, allant jusqu'à la traiter d'« épître de paille ». Mais cette paille cache assez d'aiguilles pour piquer la conscience de tout croyant : Jacques est aussi exigeant qu'il est pratique.</p>
-      <p>L'auteur se présente lui-même : « Jacques, serviteur de Dieu et du Seigneur Jésus-Christ » (Jacques 1.1). Il s'agit de Jacques le Juste, le demi-frère du Seigneur, fils de Marie et de Joseph (Matthieu 13.55). Chose remarquable, il n'avait pas cru en Jésus durant le ministère terrestre du Seigneur (Jean 7.5), mais le Ressuscité lui apparut (1 Corinthiens 15.7), et il devint ensuite un conducteur reconnu de l'Église de Jérusalem (Actes 15.13).</p>
-      <p>Paul le compte parmi les « colonnes » de l'Église, aux côtés de Pierre et de Jean (Galates 2.9). Surnommé « le juste » pour sa piété, il mourut en martyr vers l'an 62, selon l'historien Flavius Josèphe.</p>
-      <p>La lettre est très ancienne, écrite sans doute vers 44 à 49 après Jésus-Christ. Elle ne souffle pas un mot du grand concile de Jérusalem (Actes 15) ni du débat sur l'accueil des non-Juifs, ce qui invite à la dater avant ces événements. Elle est probablement le tout premier écrit du Nouveau Testament.</p>
-      <p>Jacques s'adresse « aux douze tribus qui sont dans la dispersion » (Jacques 1.1), c'est-à-dire à des croyants d'origine juive éparpillés loin de chez eux et déjà éprouvés par la pauvreté et la persécution. Il les appelle quinze fois « frères », avec la chaleur d'un pasteur qui connaît leurs combats. Sa lettre veut affermir leur foi au milieu de l'épreuve.</p>
-      <p>Avec les lettres de Pierre, Jean et Jude, Jacques fait partie des épîtres dites générales, qui complètent l'enseignement de Paul. Là où Paul insiste sur la foi, Jacques attire l'attention sur la conduite, Pierre sur l'espérance, Jean sur l'amour et Jude sur la pureté. Loin de se contredire, Paul et Jacques se complètent : Paul décrit la foi intérieure qui sauve, Jacques la foi extérieure qui sert, et la vraie semence de l'une se reconnaît au fruit visible de l'autre.</p>
-      <p>On a justement surnommé ce livre « les Proverbes du Nouveau Testament ». Ce n'est pas un raisonnement serré comme l'épître aux Romains, mais un véritable sermon : cinquante-quatre appels à l'action en cent huit versets, soit en moyenne un ordre tous les deux versets. Jacques y multiplie les images tirées de la nature, plus que toutes les épîtres de Paul réunies, dans le sillage du Sermon sur la montagne de Jésus (Matthieu 5 à 7).</p>
-      <p>Sous cette apparente liberté de proverbes, la lettre suit pourtant un fil très net. Elle décrit cinq attitudes d'une foi vivante : supporter les épreuves avec confiance (chapitre 1), servir avec compassion (chapitre 2), veiller sur ses paroles (chapitre 3), s'abaisser avec humilité (chapitre 4) et partager sans calcul (chapitre 5). Les perles ne roulent pas en vrac : elles sont soigneusement enfilées pour former un seul collier.</p>
-      <p>Une seule conviction traverse tout le livre : la foi authentique se prouve par ses fruits. Jacques ne propose pas une autre voie de salut que l'apôtre Paul ; il met simplement à l'épreuve la réalité d'une foi qu'on dit posséder. Le verset 1.27 servira de fil conducteur à cette page : la vraie religion ne reste pas dans les idées, elle se voit dans une vie changée.</p>
-    </div>
+    <ul class="points">
+      <li><b>«&nbsp;L'épître de paille&nbsp;».</b> Peu de livres de la Bible ont été autant discutés que cette courte lettre. Martin Luther lui-même la jugeait avec méfiance, allant jusqu'à la traiter d'«&nbsp;épître de paille&nbsp;». Mais cette paille cache assez d'aiguilles pour piquer la conscience de tout croyant : Jacques est aussi exigeant qu'il est pratique.</li>
+      <li><b>L'auteur : Jacques le Juste.</b> L'auteur se présente lui-même : «&nbsp;Jacques, serviteur de Dieu et du Seigneur Jésus-Christ&nbsp;» (Jacques 1.1). Il s'agit de Jacques le Juste, le demi-frère du Seigneur, fils de Marie et de Joseph (Matthieu 13.55). Chose remarquable, il n'avait pas cru en Jésus durant le ministère terrestre du Seigneur (Jean 7.5), mais le Ressuscité lui apparut (1 Corinthiens 15.7), et il devint ensuite un conducteur reconnu de l'Église de Jérusalem (Actes 15.13).</li>
+      <li><b>Une «&nbsp;colonne&nbsp;» de l'Église.</b> Paul le compte parmi les «&nbsp;colonnes&nbsp;» de l'Église, aux côtés de Pierre et de Jean (Galates 2.9). Surnommé «&nbsp;le juste&nbsp;» pour sa piété, il mourut en martyr vers l'an 62, selon l'historien Flavius Josèphe.</li>
+      <li><b>Une date très ancienne (44-49 ap. J.-C.).</b> La lettre est très ancienne, écrite sans doute vers 44 à 49 après Jésus-Christ. Elle ne souffle pas un mot du grand concile de Jérusalem (Actes 15) ni du débat sur l'accueil des non-Juifs, ce qui invite à la dater avant ces événements. Elle est probablement le tout premier écrit du Nouveau Testament.</li>
+      <li><b>Des destinataires éprouvés.</b> Jacques s'adresse «&nbsp;aux douze tribus qui sont dans la dispersion&nbsp;» (Jacques 1.1), c'est-à-dire à des croyants d'origine juive éparpillés loin de chez eux et déjà éprouvés par la pauvreté et la persécution. Il les appelle quinze fois «&nbsp;frères&nbsp;», avec la chaleur d'un pasteur qui connaît leurs combats. Sa lettre veut affermir leur foi au milieu de l'épreuve.</li>
+      <li><b>Une épître générale, complément de Paul.</b> Avec les lettres de Pierre, Jean et Jude, Jacques fait partie des épîtres dites générales, qui complètent l'enseignement de Paul (2 Pierre 3.15-16). Là où Paul insiste sur la foi (Romains 1.17; Éphésiens 2.8-9), Jacques attire l'attention sur la conduite (Jacques 2.17-18), Pierre sur l'espérance (1 Pierre 1.3-5), Jean sur l'amour (1 Jean 4.7-11) et Jude sur la pureté (Jude 3-4, 24). Loin de se contredire, Paul et Jacques se complètent : Paul décrit la foi intérieure qui sauve (Romains 10.9-10), Jacques la foi extérieure qui sert (Jacques 2.18), et la vraie semence de l'une se reconnaît au fruit visible de l'autre (Matthieu 7.16-20; Galates 5.6).</li>
+      <li><b>«&nbsp;Les Proverbes du Nouveau Testament&nbsp;».</b> On a justement surnommé ce livre «&nbsp;les Proverbes du Nouveau Testament&nbsp;». Ce n'est pas un raisonnement serré comme l'épître aux Romains, mais un véritable sermon : 54 appels à l'action en 108 versets, soit en moyenne un ordre tous les 2 versets. Jacques y multiplie les images tirées de la nature, plus que toutes les épîtres de Paul réunies, dans le sillage du Sermon sur la montagne de Jésus (Matthieu 5 à 7).</li>
+      <li><b>Un fil très net : cinq attitudes.</b> Sous cette apparente liberté de proverbes, la lettre suit pourtant un fil très net. Elle décrit cinq attitudes d'une foi vivante : supporter les épreuves avec confiance (chapitre 1), servir avec compassion (chapitre 2), veiller sur ses paroles (chapitre 3), s'abaisser avec humilité (chapitre 4) et partager sans calcul (chapitre 5). Les perles ne roulent pas en vrac : elles sont soigneusement enfilées pour former un seul collier.</li>
+      <li><b>Une seule conviction.</b> Une seule conviction traverse tout le livre : la foi authentique se prouve par ses fruits. Jacques ne propose pas une autre voie de salut que l'apôtre Paul ; il met simplement à l'épreuve la réalité d'une foi qu'on dit posséder. Le verset 1.26-27 servira de fil conducteur à cette page : la vraie religion ne reste pas dans les idées, elle se voit dans une vie changée.</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Jacques, serviteur de Dieu et du Seigneur Jésus-Christ, aux douze tribus qui sont dans la dispersion, salut !</p>
@@ -443,13 +452,13 @@
       <p class="ref">Jacques 1</p>
     </header>
     <p class="lead">Dès les premiers mots, Jacques pose la thèse de toute sa lettre : la foi authentique se vérifie, et son premier banc d'essai est l'épreuve. Le chapitre 1 nous conduit de l'épreuve qui mûrit la foi jusqu'à la Parole qu'il faut non seulement écouter, mais pratiquer.</p>
-    <div class="body">
-      <p>Jacques commence par un commandement surprenant : « Mes frères, regardez comme un sujet de joie complète les diverses épreuves auxquelles vous pouvez être exposés » (Jacques 1.2, NEG). Cette joie n'est pas un sentiment que l'on se force à ressentir, mais une décision de la foi qui regarde au but de l'épreuve. Car « l'épreuve de votre foi produit la patience » (Jacques 1.3, NEG), et cette patience mène à la maturité.</p>
-      <p>Comme l'orfèvre chauffe l'or non pour le détruire mais pour en révéler la pureté, Dieu ordonne l'épreuve dans sa providence pour prouver et affermir une foi véritable. Dans cette épreuve, à qui manque de sagesse, Jacques dit de la demander à Dieu avec foi, sans être « un homme irrésolu » (Jacques 1.8, NEG), au cœur partagé entre Dieu et le monde. Et à celui qui tient bon est promise « la couronne de vie » (Jacques 1.12, NEG), non comme un salaire mérité, mais comme un don de grâce.</p>
-      <p>Il faut alors distinguer deux choses que l'on confond facilement. L'épreuve vient de Dieu, qui la permet pour notre bien, mais la tentation, elle, ne vient jamais de Dieu : « Dieu ne peut être tenté par le mal, et il ne tente lui-même personne » (Jacques 1.13, NEG). La sollicitation au péché ne descend pas d'en haut, elle monte de notre propre cœur : « chacun est tenté quand il est attiré et amorcé par sa propre convoitise » (Jacques 1.14, NEG).</p>
-      <p>Au contraire, de Dieu ne descendent que des bienfaits : « toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières » (Jacques 1.17, NEG). C'est ce Père immuable qui « nous a engendrés selon sa volonté par la parole de vérité » (Jacques 1.18, NEG). Notre nouvelle naissance est son œuvre souveraine, pas le fruit de notre volonté : Dieu seul fait naître la vie, comme un nouveau-né ne se donne pas la vie à lui-même.</p>
-      <p>C'est pourquoi notre rapport à la Parole devient le test de cette vie reçue. Jacques exhorte à être « prompt à écouter, lent à parler, lent à se mettre en colère » (Jacques 1.19, NEG), puis à recevoir avec douceur la Parole et à la mettre en pratique. « Mettez en pratique la parole, et ne vous bornez pas à l'écouter, en vous trompant vous-mêmes par de faux raisonnements » (Jacques 1.22, NEG) : écouter sans agir, c'est se regarder dans un miroir puis oublier aussitôt son visage.</p>
-    </div>
+    <ul class="points">
+      <li><b>Une joie qui se décide.</b> Jacques commence par un commandement surprenant : «&nbsp;Mes frères, regardez comme un sujet de joie complète les diverses épreuves auxquelles vous pouvez être exposés&nbsp;» (Jacques 1.2, NEG). Cette joie n'est pas un sentiment que l'on se force à ressentir, mais une décision de la foi qui regarde au but de l'épreuve. Car «&nbsp;l'épreuve de votre foi produit la patience&nbsp;» (Jacques 1.3, NEG), et cette patience mène à la maturité.</li>
+      <li><b>L'or et l'orfèvre.</b> Comme l'orfèvre chauffe l'or non pour le détruire mais pour en révéler la pureté, Dieu ordonne l'épreuve dans sa providence pour prouver et affermir une foi véritable. Dans cette épreuve, à qui manque de sagesse, Jacques dit de la demander à Dieu avec foi, sans être «&nbsp;un homme irrésolu&nbsp;» (Jacques 1.8, NEG), au cœur partagé entre Dieu et le monde. Et à celui qui tient bon est promise «&nbsp;la couronne de vie&nbsp;» (Jacques 1.12, NEG), non comme un salaire mérité, mais comme un don de grâce.</li>
+      <li><b>Épreuve ou tentation ?</b> Il faut alors distinguer deux choses que l'on confond facilement. L'épreuve vient de Dieu, qui la permet pour notre bien, mais la tentation, elle, ne vient jamais de Dieu : «&nbsp;Dieu ne peut être tenté par le mal, et il ne tente lui-même personne&nbsp;» (Jacques 1.13, NEG). La sollicitation au péché ne descend pas d'en haut, elle monte de notre propre cœur : «&nbsp;chacun est tenté quand il est attiré et amorcé par sa propre convoitise&nbsp;» (Jacques 1.14, NEG).</li>
+      <li><b>Tout bon don vient d'en haut.</b> Au contraire, de Dieu ne descendent que des bienfaits : «&nbsp;toute grâce excellente et tout don parfait descendent d'en haut, du Père des lumières&nbsp;» (Jacques 1.17, NEG). C'est ce Père immuable qui «&nbsp;nous a engendrés selon sa volonté par la parole de vérité&nbsp;» (Jacques 1.18, NEG). Notre nouvelle naissance est son œuvre souveraine, pas le fruit de notre volonté : Dieu seul fait naître la vie, comme un nouveau-né ne se donne pas la vie à lui-même.</li>
+      <li><b>Écouter et pratiquer la Parole.</b> C'est pourquoi notre rapport à la Parole devient le test de cette vie reçue. Jacques exhorte à être «&nbsp;prompt à écouter, lent à parler, lent à se mettre en colère&nbsp;» (Jacques 1.19, NEG), puis à recevoir avec douceur la Parole et à la mettre en pratique. «&nbsp;Mettez en pratique la parole, et ne vous bornez pas à l'écouter, en vous trompant vous-mêmes par de faux raisonnements&nbsp;» (Jacques 1.22, NEG) : écouter sans agir, c'est se regarder dans un miroir puis oublier aussitôt son visage.</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Heureux l'homme qui supporte patiemment la tentation; car, après avoir été éprouvé, il recevra la couronne de vie, que le Seigneur a promise à ceux qui l'aiment.</p>
@@ -464,10 +473,6 @@
       <p>L'épreuve ne fabrique pas la foi : elle la prouve, comme le feu prouve l'or.</p>
       <div class="pull__rule"></div>
     </div>
-    <aside class="pour-vous">
-      <p class="pour-vous__title">Pour vous</p>
-      <p>Quand l'épreuve vous frappe, ne demandez pas d'abord pourquoi, mais à qui vous appartenez : un Père qui ne change pas et qui mesure le feu. Cessez de rejeter sur Dieu, sur les autres ou sur les circonstances une tentation qui naît de votre propre cœur, et revenez à Christ qui seul vous garde. Et cette semaine, choisissez un seul passage de l'Écriture que vous écoutez et mettez-le en pratique, car la foi qui sauve ne se contente jamais d'écouter.</p>
-    </aside>
   </article>
 
   <div class="divider" aria-hidden="true"><span>◆</span></div>
@@ -481,13 +486,13 @@
       <p class="ref">Jacques 2</p>
     </header>
     <p class="lead">Le chapitre 2 est le sommet de l'épître : il met la foi à l'épreuve, d'abord par la manière dont nous traitons le pauvre, puis par la grande question des œuvres. Jacques y répond à une seule interrogation : votre foi est-elle vivante ou morte ?</p>
-    <div class="body">
-      <p>Imaginez l'assemblée qui accueille un homme riche, bagues d'or et bel habit, en lui offrant la meilleure place, tandis qu'un pauvre est laissé debout ou par terre (2.2-3). Jacques appelle cela l'acception de personnes, c'est-à-dire juger les gens d'après les apparences. Une telle partialité contredit en acte la foi que l'on professe au Christ de gloire, devant qui tout rang humain s'efface.</p>
-      <p>Cette préférence pour le riche viole la loi royale, ce commandement souverain qui résume tous les autres : « Tu aimeras ton prochain comme toi-même » (Lévitique 19.18, cité en Jacques 2.8). Dieu lui-même ne fait pas acception de personnes ; il a même choisi les pauvres pour les rendre riches dans la foi (2.5). Et Jacques conclut sur une note d'espérance : « la miséricorde triomphe du jugement » (Jacques 2.13), car celui qui a reçu la grâce de Dieu en devient à son tour un canal.</p>
-      <p>La seconde moitié du chapitre pose la grande question : une foi sans œuvres peut-elle sauver ? La réponse de Jacques est tranchante : « Il en est ainsi de la foi : si elle n'a pas les œuvres, elle est morte en elle-même » (Jacques 2.17). Pour le prouver, il rappelle que les démons aussi croient qu'il y a un seul Dieu, et ils tremblent (2.19) : la foi qui sauve n'est donc ni la simple exactitude doctrinale ni l'émotion religieuse.</p>
-      <p>Jacques produit deux témoins, le patriarche Abraham et la prostituée Rahab (2.21-25). Abraham fut déclaré juste par la foi bien avant l'offrande d'Isaac (Genèse 15.6) ; des décennies plus tard, cette œuvre n'a pas créé sa foi mais l'a démontrée et menée à maturité. Le choix d'un homme vénéré et d'une étrangère improbable dit que Dieu sauve tous les croyants sur un seul et même principe.</p>
-      <p>Ce passage semble heurter l'apôtre Paul, qui écrit que « l'homme est justifié par la foi, sans les œuvres de la loi » (Romains 3.28). En réalité ils s'accordent, car ils regardent deux choses différentes : Paul décrit comment le pécheur est déclaré juste devant Dieu, par la foi seule sans aucun mérite, tandis que Jacques décrit la nature d'une foi qui justifie vraiment, une foi vivante qui produit nécessairement des œuvres. La formule des Réformés le dit en une phrase : la foi seule sauve, mais la foi qui sauve n'est jamais seule. Jamais de salut gagné par les œuvres, jamais non plus de grâce à bon marché qui laisserait le cœur inchangé.</p>
-    </div>
+    <ul class="points">
+      <li><b>L'acception de personnes.</b> Imaginez l'assemblée qui accueille un homme riche, bagues d'or et bel habit, en lui offrant la meilleure place, tandis qu'un pauvre est laissé debout ou par terre (2.2-3). Jacques appelle cela l'acception de personnes, c'est-à-dire juger les gens d'après les apparences. Une telle partialité contredit en acte la foi que l'on professe au Christ de gloire, devant qui tout rang humain s'efface.</li>
+      <li><b>La loi royale : aimer son prochain.</b> Cette préférence pour le riche viole la loi royale, ce commandement souverain qui résume tous les autres : «&nbsp;Tu aimeras ton prochain comme toi-même&nbsp;» (Lévitique 19.18, cité en Jacques 2.8). Dieu lui-même ne fait pas acception de personnes ; il a même choisi les pauvres pour les rendre riches dans la foi (2.5). Et Jacques conclut sur une note d'espérance : «&nbsp;la miséricorde triomphe du jugement&nbsp;» (Jacques 2.13), car celui qui a reçu la grâce de Dieu en devient à son tour un canal.</li>
+      <li><b>Une foi sans œuvres est morte.</b> La seconde moitié du chapitre pose la grande question : une foi sans œuvres peut-elle sauver ? La réponse de Jacques est tranchante : «&nbsp;Il en est ainsi de la foi : si elle n'a pas les œuvres, elle est morte en elle-même&nbsp;» (Jacques 2.17). Pour le prouver, il rappelle que les démons aussi croient qu'il y a un seul Dieu, et ils tremblent (2.19) : la foi qui sauve n'est donc ni la simple exactitude doctrinale ni l'émotion religieuse.</li>
+      <li><b>Deux témoins : Abraham et Rahab.</b> Jacques produit deux témoins, le patriarche Abraham et la prostituée Rahab (2.21-25). Abraham fut déclaré juste par la foi bien avant l'offrande d'Isaac (Genèse 15.6) ; des décennies plus tard, cette œuvre n'a pas créé sa foi mais l'a démontrée et menée à maturité. Le choix d'un homme vénéré et d'une étrangère improbable dit que Dieu sauve tous les croyants sur un seul et même principe.</li>
+      <li><b>Paul et Jacques s'accordent.</b> Ce passage semble heurter l'apôtre Paul, qui écrit que «&nbsp;l'homme est justifié par la foi, sans les œuvres de la loi&nbsp;» (Romains 3.28). En réalité ils s'accordent, car ils regardent deux choses différentes : Paul décrit comment le pécheur est déclaré juste devant Dieu, par la foi seule sans aucun mérite, tandis que Jacques décrit la nature d'une foi qui justifie vraiment, une foi vivante qui produit nécessairement des œuvres. La formule des Réformés le dit en une phrase : la foi seule sauve, mais la foi qui sauve n'est jamais seule. Jamais de salut gagné par les œuvres, jamais non plus de grâce à bon marché qui laisserait le cœur inchangé.</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Si vous accomplissez la loi royale, selon l'Écriture : Tu aimeras ton prochain comme toi-même, vous faites bien.</p>
@@ -502,10 +507,6 @@
       <p>La foi seule sauve, mais la foi qui sauve n'est jamais seule.</p>
       <div class="pull__rule"></div>
     </div>
-    <aside class="pour-vous">
-      <p class="pour-vous__title">Pour vous</p>
-      <p>Examinez votre propre foi sans vous condamner : non pour gagner le ciel par vos efforts, mais pour discerner si la grâce reçue vous a réellement transformé. Regardez où vous flattez les puissants et négligez les petits, et où votre foi reste un cadavre de belles paroles devant le frère dans le besoin. Le remède n'est pas de redoubler de volonté, mais de revenir à la croix où vous avez vous-même obtenu miséricorde, car de ce cœur uni à Christ jaillit naturellement l'amour qui agit.</p>
-    </aside>
   </article>
 
   <div class="divider" aria-hidden="true"><span>◆</span></div>
@@ -519,15 +520,15 @@
       <p class="ref">Jacques 3</p>
     </header>
     <p class="lead">La foi vivante se vérifie d'abord dans nos paroles. Jacques nous conduit de la bouche au cœur, puis du cœur à la vraie sagesse.</p>
-    <div class="body">
-      <p>Jacques commence par avertir ceux qui veulent enseigner : ils seront jugés plus sévèrement (3.1). Puis il élargit aussitôt à tous : « nous bronchons tous de bien des manières » (Jacques 3.2). Personne n'échappe au pouvoir de sa propre langue.</p>
-      <p>Pour le montrer, Jacques accumule des images frappantes. Comme le petit mors dirige le cheval et le petit gouvernail le navire, la langue, ce petit membre, décide du sort de tout l'être (3.3-5). Elle est aussi un feu, capable d'embraser toute une forêt d'une seule étincelle (3.6).</p>
-      <p>Surtout, Jacques affirme une chose troublante : la langue est « un mal qu'on ne peut réprimer », « pleine d'un venin mortel » (Jacques 3.8). Attention : ce passage n'est pas un cours pour mieux parler. Si l'homme dompte toutes les bêtes mais reste impuissant devant sa propre langue (3.7-8), c'est que le problème n'est pas la bouche, mais le cœur.</p>
-      <p>Jésus l'a dit : « c'est de l'abondance du cœur que la bouche parle » (Matthieu 12.34). La langue n'est que le déversoir audible du cœur. On ne guérit pas une fièvre en cassant le thermomètre : il faut un cœur nouveau, que seul l'Esprit de Dieu peut donner en nous faisant naître de nouveau.</p>
-      <p>Cette racine du cœur, Jacques la nomme dans la seconde moitié du chapitre (3.13-18) : la sagesse. Il en oppose deux. La fausse sagesse est terrestre, animale, démoniaque, marquée par la jalousie et l'esprit de rivalité (3.14-16) ; elle peut être brillante et religieuse, mais elle vient d'en bas et produit le désordre.</p>
-      <p>La sagesse d'en haut, au contraire, est un don de Dieu (Jacques 1.5). Elle est « premièrement pure, ensuite pacifique » (Jacques 3.17), et cet ordre compte : il n'y a pas de vraie paix au prix d'un compromis avec le péché. Comme la foi du chapitre 2, cette sagesse se prouve par ses fruits, par la douceur d'une vie conforme à celle de Christ.</p>
-      <p>Jacques termine par une promesse : « le fruit de la justice est semé dans la paix par ceux qui recherchent la paix » (Jacques 3.18). Le travail patient de la paix n'est jamais perdu, car Dieu lui réserve une moisson. (Les lectures réformées s'accordent sur cette promesse ; elles diffèrent seulement sur le cadre de la fin des temps, point que Jacques ne tranche pas ici.)</p>
-    </div>
+    <ul class="points">
+      <li><b>Un avertissement pour tous.</b> Jacques commence par avertir ceux qui veulent enseigner : ils seront jugés plus sévèrement (3.1). Puis il élargit aussitôt à tous : «&nbsp;nous bronchons tous de bien des manières&nbsp;» (Jacques 3.2). Personne n'échappe au pouvoir de sa propre langue.</li>
+      <li><b>Le mors, le gouvernail, le feu.</b> Pour le montrer, Jacques accumule des images frappantes. Comme le petit mors dirige le cheval et le petit gouvernail le navire, la langue, ce petit membre, décide du sort de tout l'être (3.3-5). Elle est aussi un feu, capable d'embraser toute une forêt d'une seule étincelle (3.6).</li>
+      <li><b>Une langue indomptable.</b> Surtout, Jacques affirme une chose troublante : la langue est «&nbsp;un mal qu'on ne peut réprimer&nbsp;», «&nbsp;pleine d'un venin mortel&nbsp;» (Jacques 3.8). Attention : ce passage n'est pas un cours pour mieux parler. Si l'homme dompte toutes les bêtes mais reste impuissant devant sa propre langue (3.7-8), c'est que le problème n'est pas la bouche, mais le cœur.</li>
+      <li><b>Le déversoir du cœur.</b> Jésus l'a dit : «&nbsp;c'est de l'abondance du cœur que la bouche parle&nbsp;» (Matthieu 12.34). La langue n'est que le déversoir audible du cœur. On ne guérit pas une fièvre en cassant le thermomètre : il faut un cœur nouveau, que seul l'Esprit de Dieu peut donner en nous faisant naître de nouveau.</li>
+      <li><b>La fausse sagesse, d'en bas.</b> Cette racine du cœur, Jacques la nomme dans la seconde moitié du chapitre (3.13-18) : la sagesse. Il en oppose deux. La fausse sagesse est terrestre, animale, démoniaque, marquée par la jalousie et l'esprit de rivalité (3.14-16) ; elle peut être brillante et religieuse, mais elle vient d'en bas et produit le désordre.</li>
+      <li><b>La sagesse d'en haut.</b> La sagesse d'en haut, au contraire, est un don de Dieu (Jacques 1.5). Elle est «&nbsp;premièrement pure, ensuite pacifique&nbsp;» (Jacques 3.17), et cet ordre compte : il n'y a pas de vraie paix au prix d'un compromis avec le péché. Comme la foi du chapitre 2, cette sagesse se prouve par ses fruits, par la douceur d'une vie conforme à celle de Christ.</li>
+      <li><b>Une promesse pour les artisans de paix.</b> Jacques termine par une promesse : «&nbsp;le fruit de la justice est semé dans la paix par ceux qui recherchent la paix&nbsp;» (Jacques 3.18). Le travail patient de la paix n'est jamais perdu, car Dieu lui réserve une moisson. (Les lectures réformées s'accordent sur cette promesse ; elles diffèrent seulement sur le cadre de la fin des temps, point que Jacques ne tranche pas ici.)</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Mais la langue, aucun homme ne peut la dompter ; c'est un mal qu'on ne peut réprimer ; elle est pleine d'un venin mortel.</p>
@@ -542,10 +543,6 @@
       <p>La langue n'est pas le problème : elle est le thermomètre du cœur. On ne guérit pas la fièvre en cassant le thermomètre.</p>
       <div class="pull__rule"></div>
     </div>
-    <aside class="pour-vous">
-      <p class="pour-vous__title">Pour vous</p>
-      <p>Ne cherchez pas seulement à surveiller vos mots : demandez à Dieu un cœur renouvelé, car la bouche suit toujours le cœur. Examinez votre sagesse à ses fruits : produit-elle la jalousie et la dispute, ou la douceur et la paix ? Et au lieu de fabriquer cette douceur par effort, recevez-la de l'Esprit, en suivant Christ qui fut doux et humble de cœur.</p>
-    </aside>
   </article>
 
   <div class="divider" aria-hidden="true"><span>◆</span></div>
@@ -559,14 +556,14 @@
       <p class="ref">Jacques 4</p>
     </header>
     <p class="lead">Au cœur le plus tranchant de l'épître, Jacques remonte des querelles visibles jusqu'à leur racine cachée : un cœur ami du monde et gonflé d'orgueil. Mais au centre de cet avertissement sévère jaillit l'évangile : Dieu fait grâce aux humbles.</p>
-    <div class="body">
-      <p>Le chapitre s'ouvre sur une question directe : d'où viennent les conflits et les luttes parmi vous (4.1) ? Jacques ne traite pas les querelles d'Église comme de simples malentendus à régler par la bonne méthode. Il les fait remonter aux désirs qui combattent dans nos cœurs, ce désir de plaisir et de possession qui n'obtient jamais assez.</p>
-      <p>Au verset 4, le ton devient brûlant : Jacques traite ses lecteurs d'adultères. Ce n'est pas une accusation de péché sexuel, mais une image que les prophètes employaient sans cesse : courtiser le monde, c'est trahir Dieu comme une épouse infidèle trahit son mari. Le monde désigne ici le système humain organisé en révolte contre Dieu, avec ses valeurs et ses convoitises.</p>
-      <p>Voilà l'affirmation centrale du passage : on ne peut pas aimer le monde et aimer Dieu en même temps. Il n'existe pas de double appartenance du cœur, pas de compromis tranquille. Se faire l'ami du monde, c'est par là même se constituer ennemi de Dieu.</p>
-      <p>Mais le verset 6 fait tout basculer : « Dieu résiste aux orgueilleux, mais il fait grâce aux humbles. » Cet avertissement, le plus dur de l'épître, s'ouvre soudain sur la bonne nouvelle : la grâce de Dieu est toujours plus grande que le péché. Ce n'est pas l'énormité de la faute qui ferme la porte, mais l'orgueil. La suite, soumettez-vous à Dieu, humiliez-vous devant le Seigneur (4.7-10), n'est pas un programme d'auto-amélioration, mais la réponse que cette grâce produit dans un cœur abaissé.</p>
-      <p>La seconde moitié du chapitre décline cette humilité sur deux terrains où l'orgueil ressurgit aussitôt. D'abord la langue : ne dites pas de mal les uns des autres et ne jugez pas votre frère, car se faire juge à la place de Dieu, c'est usurper le trône de l'unique Législateur et Juge (4.11-12). Ensuite les projets : ne présumez pas de l'avenir, car notre vie n'est qu'une vapeur qui paraît pour un peu de temps, puis disparaît (4.14).</p>
-      <p>Attention au contresens : planifier n'est pas un péché. Jacques ne condamne ni le travail, ni la prévoyance, ni le profit honnête. Ce qu'il vise, c'est l'homme qui dispose de demain comme si Dieu n'existait pas. Le remède n'est pas une formule magique à réciter, mais une vraie disposition du cœur : « si le Seigneur le veut, nous vivrons et nous ferons ceci ou cela » (4.15).</p>
-    </div>
+    <ul class="points">
+      <li><b>D'où viennent les conflits ?</b> Le chapitre s'ouvre sur une question directe : d'où viennent les conflits et les luttes parmi vous (4.1) ? Jacques ne traite pas les querelles d'Église comme de simples malentendus à régler par la bonne méthode. Il les fait remonter aux désirs qui combattent dans nos cœurs, ce désir de plaisir et de possession qui n'obtient jamais assez.</li>
+      <li><b>L'amitié du monde, une infidélité.</b> Au verset 4, le ton devient brûlant : Jacques traite ses lecteurs d'adultères. Ce n'est pas une accusation de péché sexuel, mais une image que les prophètes employaient sans cesse : courtiser le monde, c'est trahir Dieu comme une épouse infidèle trahit son mari. Le monde désigne ici le système humain organisé en révolte contre Dieu, avec ses valeurs et ses convoitises.</li>
+      <li><b>Pas de double appartenance.</b> Voilà l'affirmation centrale du passage : on ne peut pas aimer le monde et aimer Dieu en même temps. Il n'existe pas de double appartenance du cœur, pas de compromis tranquille. Se faire l'ami du monde, c'est par là même se constituer ennemi de Dieu.</li>
+      <li><b>Dieu fait grâce aux humbles.</b> Mais le verset 6 fait tout basculer : «&nbsp;Dieu résiste aux orgueilleux, mais il fait grâce aux humbles.&nbsp;» Cet avertissement, le plus dur de l'épître, s'ouvre soudain sur la bonne nouvelle : la grâce de Dieu est toujours plus grande que le péché. Ce n'est pas l'énormité de la faute qui ferme la porte, mais l'orgueil. La suite, soumettez-vous à Dieu, humiliez-vous devant le Seigneur (4.7-10), n'est pas un programme d'auto-amélioration, mais la réponse que cette grâce produit dans un cœur abaissé.</li>
+      <li><b>L'humilité : la langue et les projets.</b> La seconde moitié du chapitre décline cette humilité sur deux terrains où l'orgueil ressurgit aussitôt. D'abord la langue : ne dites pas de mal les uns des autres et ne jugez pas votre frère, car se faire juge à la place de Dieu, c'est usurper le trône de l'unique Législateur et Juge (4.11-12). Ensuite les projets : ne présumez pas de l'avenir, car notre vie n'est qu'une vapeur qui paraît pour un peu de temps, puis disparaît (4.14).</li>
+      <li><b>Planifier sous la volonté de Dieu.</b> Attention au contresens : planifier n'est pas un péché. Jacques ne condamne ni le travail, ni la prévoyance, ni le profit honnête. Ce qu'il vise, c'est l'homme qui dispose de demain comme si Dieu n'existait pas. Le remède n'est pas une formule magique à réciter, mais une vraie disposition du cœur : «&nbsp;si le Seigneur le veut, nous vivrons et nous ferons ceci ou cela&nbsp;» (4.15).</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Mais il accorde une grâce d'autant plus grande. C'est pourquoi l'Écriture dit : Dieu résiste aux orgueilleux, mais il fait grâce aux humbles.</p>
@@ -581,10 +578,6 @@
       <p>L'avertissement le plus dur de l'épître s'ouvre sur la plus douce des promesses : Dieu fait grâce aux humbles.</p>
       <div class="pull__rule"></div>
     </div>
-    <aside class="pour-vous">
-      <p class="pour-vous__title">Pour vous</p>
-      <p>Examinez le lieu de vos conflits et de vos rancunes : ils trahissent souvent un cœur partagé entre Dieu et le monde. La voie de la paix n'est pas de mieux gérer vos relations par technique, mais de vous abaisser devant Dieu, qui promet d'élever celui qui s'humilie. Et tenez vos projets d'une main ouverte : planifiez avec sagesse, mais remettez chaque lendemain au Seigneur qui tient votre vie et votre souffle, en disant du fond du cœur « si le Seigneur le veut ».</p>
-    </aside>
   </article>
 
   <div class="divider" aria-hidden="true"><span>◆</span></div>
@@ -598,14 +591,14 @@
       <p class="ref">Jacques 5</p>
     </header>
     <p class="lead">Jacques referme sa lettre sur trois urgences du cœur croyant : un avertissement aux riches qui oppriment, un appel à la patience jusqu'au retour du Seigneur, et un dernier mot sur la prière dans toutes les saisons de la vie.</p>
-    <div class="body">
-      <p>Le chapitre s'ouvre par un avertissement sévère, à la manière des prophètes, contre les riches oppresseurs (5.1-6). Ces hommes ont retenu le salaire des ouvriers qui ont moissonné leurs champs, et ce salaire volé crie vers Dieu. Jacques ne les appelle pas « frères » et ne les invite pas à se repentir : ce sont des oppresseurs du dehors dont le jugement est annoncé.</p>
-      <p>Le point fort est que leur richesse amassée ne les sauvera pas. L'or qui se rouille et les habits rongés par les mites témoigneront contre eux au jour du jugement. La richesse n'est pas condamnée en elle-même, mais le cœur qui s'y confie et qui écrase le faible pour l'accumuler.</p>
-      <p>À partir du verset 7, Jacques se tourne vers ses « frères » avec un « donc » décisif : puisque Dieu jugera l'injustice, l'opprimé n'a pas à se venger, il doit patienter. Comme le cultivateur attend la pluie qu'il ne peut commander, le croyant tient bon, « car l'avènement du Seigneur est proche » (5.8) et « le juge est à la porte » (5.9). Job, qui se plaignit mais ne lâcha jamais Dieu, en est l'exemple : la patience biblique n'est pas un calme surhumain, c'est le refus d'abandonner la foi.</p>
-      <p>Sur ce retour du Seigneur, John MacArthur, dans la ligne du Master's Seminary, prêche un retour imminent lu dans un cadre dispensationaliste et prémillénariste, qui distingue Israël et l'Église et attend un règne terrestre à venir. La Confession baptiste de 1689, de tradition covenantale et largement amillénariste, confesse la même imminence et la même responsabilité du croyant, mais voit l'Église comme le peuple unique de la nouvelle alliance, sans ce calendrier détaillé. Les deux retiennent l'essentiel : Christ revient, le jugement est certain, et le croyant attend en veillant.</p>
-      <p>La dernière section (5.13-20) place la prière dans chaque saison : que celui qui souffre prie, que celui qui est joyeux chante, que le malade fasse venir les anciens. L'onction d'huile et « la prière de la foi » (5.15) ne sont ni une guérison miraculeuse garantie ni l'extrême-onction du mourant : c'est un soin pastoral ordinaire remis à la volonté souveraine de Dieu, qui peut répondre oui, non ou pas encore. Élie, « homme de la même nature que nous » (5.17), pria et fut exaucé, preuve que Dieu écoute les siens, même ordinaires.</p>
-      <p>La lettre s'achève sans salutation, sur un envoi : aller rechercher celui qui s'égare de la vérité pour le ramener. Cette restauration fraternelle « sauvera une âme de la mort » (5.20). Loin de contredire la persévérance des saints, elle en est l'un des moyens : Dieu garde les siens, et il les garde souvent par un frère qui va chercher celui qui dérive.</p>
-    </div>
+    <ul class="points">
+      <li><b>Avertissement aux riches oppresseurs.</b> Le chapitre s'ouvre par un avertissement sévère, à la manière des prophètes, contre les riches oppresseurs (5.1-6). Ces hommes ont retenu le salaire des ouvriers qui ont moissonné leurs champs, et ce salaire volé crie vers Dieu. Jacques ne les appelle pas «&nbsp;frères&nbsp;» et ne les invite pas à se repentir : ce sont des oppresseurs du dehors dont le jugement est annoncé.</li>
+      <li><b>La richesse ne sauve pas.</b> Le point fort est que leur richesse amassée ne les sauvera pas. L'or qui se rouille et les habits rongés par les mites témoigneront contre eux au jour du jugement. La richesse n'est pas condamnée en elle-même, mais le cœur qui s'y confie et qui écrase le faible pour l'accumuler.</li>
+      <li><b>Patienter comme le cultivateur.</b> À partir du verset 7, Jacques se tourne vers ses «&nbsp;frères&nbsp;» avec un «&nbsp;donc&nbsp;» décisif : puisque Dieu jugera l'injustice, l'opprimé n'a pas à se venger, il doit patienter. Comme le cultivateur attend la pluie qu'il ne peut commander, le croyant tient bon, «&nbsp;car l'avènement du Seigneur est proche&nbsp;» (5.8) et «&nbsp;le juge est à la porte&nbsp;» (5.9). Job, qui se plaignit mais ne lâcha jamais Dieu, en est l'exemple : la patience biblique n'est pas un calme surhumain, c'est le refus d'abandonner la foi.</li>
+      <li><b>Le retour du Seigneur : deux lectures.</b> Sur ce retour du Seigneur, John MacArthur, dans la ligne du Master's Seminary, prêche un retour imminent lu dans un cadre dispensationaliste et prémillénariste, qui distingue Israël et l'Église et attend un règne terrestre à venir. La Confession baptiste de 1689, de tradition covenantale et largement amillénariste, confesse la même imminence et la même responsabilité du croyant, mais voit l'Église comme le peuple unique de la nouvelle alliance, sans ce calendrier détaillé. Les deux retiennent l'essentiel : Christ revient, le jugement est certain, et le croyant attend en veillant.</li>
+      <li><b>La prière dans chaque saison.</b> La dernière section (5.13-20) place la prière dans chaque saison : que celui qui souffre prie, que celui qui est joyeux chante, que le malade fasse venir les anciens. L'onction d'huile et «&nbsp;la prière de la foi&nbsp;» (5.15) ne sont ni une guérison miraculeuse garantie ni l'extrême-onction du mourant : c'est un soin pastoral ordinaire remis à la volonté souveraine de Dieu, qui peut répondre oui, non ou pas encore. Élie, «&nbsp;homme de la même nature que nous&nbsp;» (5.17), pria et fut exaucé, preuve que Dieu écoute les siens, même ordinaires.</li>
+      <li><b>Ramener celui qui s'égare.</b> La lettre s'achève sans salutation, sur un envoi : aller rechercher celui qui s'égare de la vérité pour le ramener. Cette restauration fraternelle «&nbsp;sauvera une âme de la mort&nbsp;» (5.20). Loin de contredire la persévérance des saints, elle en est l'un des moyens : Dieu garde les siens, et il les garde souvent par un frère qui va chercher celui qui dérive.</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Soyez donc patients, frères, jusqu'à l'avènement du Seigneur. Voici, le laboureur attend le précieux fruit de la terre, prenant patience à son égard, jusqu'à ce qu'il ait reçu les pluies de la première et de l'arrière-saison.</p>
@@ -620,10 +613,6 @@
       <p>La patience du croyant n'est pas l'attente d'une date, mais la vie tendue vers un Maître qui peut paraître à tout instant.</p>
       <div class="pull__rule"></div>
     </div>
-    <aside class="pour-vous">
-      <p class="pour-vous__title">Pour vous</p>
-      <p>Devant l'injustice ou l'épreuve, vous n'êtes pas appelé à vous venger ni à désespérer, mais à patienter comme le cultivateur attend la pluie, parce que le Seigneur revient et qu'il a tout vu. Priez dans chaque saison : dans la souffrance, dans la joie, dans la maladie, en remettant la réponse à la volonté de votre Père. Et veillez sur vos frères : aller rechercher celui qui s'égare est l'une des plus belles tâches confiées à un croyant.</p>
-    </aside>
   </article>
 
   <div class="divider" aria-hidden="true"><span>◆</span></div>
@@ -636,14 +625,14 @@
       <p class="ref">Jacques 1 à 5</p>
     </header>
     <p class="lead">D'un bout à l'autre, Jacques pose une seule question, et c'est aussi la nôtre : votre foi est-elle vivante ? Une foi vivante ne reste jamais les bras croisés ; elle se prouve par ses fruits, de l'épreuve jusqu'à la prière.</p>
-    <div class="body">
-      <p>Rappelons le chemin parcouru. Tout commence au banc d'épreuve du chapitre 1, où la foi est éprouvée avant d'être prouvée, puis s'élève vers le sommet du livre, la foi qui agit du chapitre 2, le cœur de toute l'épître.</p>
-      <p>De là, Jacques redescend dans le concret de la vie : la langue qui révèle le cœur, les deux sagesses, l'argent, les conflits. Le point le plus bas est l'appel à s'abaisser devant Dieu, et c'est précisément là que jaillit la grâce : « Dieu résiste aux orgueilleux, mais il fait grâce aux humbles » (Jacques 4.6).</p>
-      <p>Le livre ne se termine pas sur un effort à fournir, mais sur l'espérance : « l'avènement du Seigneur est proche » et « le juge se tient à la porte » (Jacques 5.8-9). Avec John MacArthur, nous y entendons le retour imminent et personnel du Seigneur ; la Confession baptiste de 1689 lit la même attente sans le cadre prémillénariste, mais tous tiennent ensemble cette certitude : Christ revient, et son retour appelle la patience et la sainteté.</p>
-      <p>L'épître s'achève alors sur une communauté qui prie dans toutes les saisons et qui va rechercher celui qui s'égare (Jacques 5.16-20). La foi vivante n'est pas une affaire privée ; elle veille les uns sur les autres.</p>
-      <p>Voilà la leçon centrale, et elle réconcilie Jacques avec l'apôtre Paul. Paul explique comment un pécheur est déclaré juste devant Dieu : par la foi seule, sans les œuvres. Jacques décrit la nature de cette foi qui sauve : une foi vivante produit toujours des œuvres, tandis qu'« une foi sans œuvres est morte » (Jacques 2.17).</p>
-      <p>L'appel final n'est donc pas de redoubler d'effort moral, mais de revenir à Christ. C'est son Esprit qui produit nécessairement le fruit chez ceux qui sont vraiment unis à lui ; la vraie religion se voit alors dans une vie changée (Jacques 1.27).</p>
-    </div>
+    <ul class="points">
+      <li><b>Le chemin parcouru.</b> Rappelons le chemin parcouru. Tout commence au banc d'épreuve du chapitre 1, où la foi est éprouvée avant d'être prouvée, puis s'élève vers le sommet du livre, la foi qui agit du chapitre 2, le cœur de toute l'épître.</li>
+      <li><b>La grâce au point le plus bas.</b> De là, Jacques redescend dans le concret de la vie : la langue qui révèle le cœur, les deux sagesses, l'argent, les conflits. Le point le plus bas est l'appel à s'abaisser devant Dieu, et c'est précisément là que jaillit la grâce : «&nbsp;Dieu résiste aux orgueilleux, mais il fait grâce aux humbles&nbsp;» (Jacques 4.6).</li>
+      <li><b>L'espérance du retour.</b> Le livre ne se termine pas sur un effort à fournir, mais sur l'espérance : «&nbsp;l'avènement du Seigneur est proche&nbsp;» et «&nbsp;le juge se tient à la porte&nbsp;» (Jacques 5.8-9). Avec John MacArthur, nous y entendons le retour imminent et personnel du Seigneur ; la Confession baptiste de 1689 lit la même attente sans le cadre prémillénariste, mais tous tiennent ensemble cette certitude : Christ revient, et son retour appelle la patience et la sainteté.</li>
+      <li><b>Une foi qui n'est pas privée.</b> L'épître s'achève alors sur une communauté qui prie dans toutes les saisons et qui va rechercher celui qui s'égare (Jacques 5.16-20). La foi vivante n'est pas une affaire privée ; elle veille les uns sur les autres.</li>
+      <li><b>La leçon centrale.</b> Voilà la leçon centrale, et elle réconcilie Jacques avec l'apôtre Paul. Paul explique comment un pécheur est déclaré juste devant Dieu : par la foi seule, sans les œuvres. Jacques décrit la nature de cette foi qui sauve : une foi vivante produit toujours des œuvres, tandis qu'«&nbsp;une foi sans œuvres est morte&nbsp;» (Jacques 2.17).</li>
+      <li><b>Revenir à Christ.</b> L'appel final n'est donc pas de redoubler d'effort moral, mais de revenir à Christ. C'est son Esprit qui produit nécessairement le fruit chez ceux qui sont vraiment unis à lui ; la vraie religion se voit alors dans une vie changée (Jacques 1.27).</li>
+    </ul>
     <div class="verses">
       <figure class="verse">
         <p class="verse__text">Il en est ainsi de la foi : si elle n'a pas les œuvres, elle est morte en elle-même.</p>
@@ -665,13 +654,14 @@
 <footer class="footer">
   <p class="footer__church">Église Baptiste de Charlesbourg</p>
   <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
-  <p class="footer__line">Série « La foi qui agit » · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__line">Série «&nbsp;La foi qui agit&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
   <p class="footer__sdg">Soli Deo Gloria</p>
 </footer>
 
 <script>
   // Barre de progression de lecture
   var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
   var nav = document.getElementById('nav');
   var hero = document.getElementById('hero');
 
@@ -680,6 +670,7 @@
     var max = h.scrollHeight - h.clientHeight;
     var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
     progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
   }
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
