@@ -3,6 +3,8 @@
 > Ressource d'étude biblique et de préparation de prédication sur l'épître de Jacques,
 > préparée pour l'**Église Baptiste de Charlesbourg** (Québec).
 
+🌐 **Site en ligne : [agbruneau.github.io/Jacques](https://agbruneau.github.io/Jacques/)**
+
 Ce dépôt rassemble l'ensemble du matériel produit pour une exposition suivie
 (*lectio continua*) de l'épître de Jacques : une page web de présentation destinée
 à l'assemblée, des recherches exégétiques détaillées passage par passage, un plan
