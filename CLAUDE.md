@@ -32,14 +32,31 @@ MacArthur **unique**) ; le skill `oia-reformee` sert de grille de référence do
     lecture covenantale/amillénariste de la 1689 comme « témoin minoritaire » subordonné. En
     cas de divergence, **trancher pour MacArthur**.
 - **Ne jamais inventer de citation de MacArthur** ni de référence non vérifiable. Paraphraser
-  ses positions documentées (MacArthur NT Commentary, *La Bible d'étude MacArthur*, gty.org,
-  *Biblical Doctrine* de MacArthur et Mayhue).
+  ses positions documentées, **en priorité depuis la source de référence du dépôt** (ci-dessous),
+  puis MacArthur NT Commentary, gty.org, *Biblical Doctrine* (MacArthur et Mayhue).
+
+### Source de référence pour la conformité — `John MacArthur - Jacques.pdf`
+
+`John MacArthur - Jacques.pdf` (racine du dépôt) reproduit les **notes d'étude de *La Bible
+d'étude MacArthur* sur l'épître de Jacques**, sur le **texte NEG** : introduction du livre
+(Titre, Auteur et date, tableau de parallèles Jacques ↔ Sermon sur la montagne, Contexte et
+arrière-plan, Thèmes historiques et théologiques), puis le **texte de Jacques 1 à 5 accompagné
+des notes verset par verset de MacArthur**. C'est la **référence d'autorité propre au livre** :
+elle prime sur la mémoire et sur les sources générales, et **tranche la conformité** de tout le
+contenu du dépôt portant sur Jacques.
+
+- **Valider avant d'affirmer.** Avant de produire, réviser ou déclarer conforme une recherche,
+  **confronter ses affirmations doctrinales aux notes de ce PDF** pour la péricope visée, en
+  priorité sur les points sensibles : Jacques 2.14-26 (foi/œuvres, deux sens de *justifier*),
+  5.7-9 (parousie), 5.14-15 (onction et relèvement du croyant). En cas d'écart, **le PDF
+  tranche**. Voir « Gotchas » pour la méthode de lecture (PDF scanné, sans couche de texte).
 
 ## Structure du dépôt
 
 ```
 README.md
 CLAUDE.md
+John MacArthur - Jacques.pdf   Notes de La Bible d'étude MacArthur sur Jacques (NEG) — RÉFÉRENCE de conformité
 Recherches/
   NN - Titre de la prédication (Jacques c.v-v)/     12 dossiers, un par semaine de prédication
     Recherche-MacArthur-Jacques-<réf>.md             source rédigée (prose continue)
@@ -98,6 +115,11 @@ Chaque dossier garde **trois fichiers cohérents** : `.md` (source) → `.pdf` (
 - `generate-pdf.py` (fourni par le skill `sermon-JMA`, **non versionné dans ce dépôt**) exige
   `reportlab` (`pip install reportlab`).
 - `.gitignore` exclut `ruvector.db` (outillage local), les copies Windows `* - Copie*` et `.claude/`.
+- **Lire `John MacArthur - Jacques.pdf`** : PDF **scanné, sans couche de texte** (extraction texte
+  vide ; `pdftoppm`/poppler indisponible). Le lire **visuellement** en rasterisant les pages avec
+  PyMuPDF : `pip install pymupdf`, puis
+  `python -c "import fitz; d=fitz.open(r'John MacArthur - Jacques.pdf'); d[i].get_pixmap(matrix=fitz.Matrix(2,2)).save(r'page.png')"`
+  (13 pages ; `i=0` = introduction du livre), et ouvrir le PNG obtenu.
 
 ## Crédits
 
