@@ -8,7 +8,7 @@ couvre que ce qui n'est pas dérivable du dépôt.
 
 Le dépôt est organisé pour accueillir les **27 livres du NT**, chacun dans un dossier numéroté de
 **40 (Matthieu) à 66 (Apocalypse)** selon l'ordre canonique (numérotation des 66 livres de la
-Bible protestante : 39 AT + 27 NT). Trois livres sont amorcés (Luc, Actes, Jacques) ; les autres
+Bible protestante : 39 AT + 27 NT). Quatre livres sont amorcés (Luc, Actes, Galates, Jacques) ; les autres
 sont des dossiers en attente.
 
 ## Cadre théologique (non négociable)
@@ -159,13 +159,14 @@ Biblique/
   reproduit le **texte NEG** du livre, `JMA - <Livre>.md` les **notes d'étude MacArthur** du livre,
   extraits de ce PDF (table des pages en « Gotchas »). Ne jamais y mêler une autre version
   biblique, un autre commentaire, ni un contenu tiré de la mémoire ou d'une source externe.
-- **État** : `59 - Jacques` est complet (12 péricopes + site de présentation) ; `42 - Luc` et
-  `44 - Actes` ont leur recherche globale (`00 - Introduction/`) ; les 24 autres dossiers sont en
-  attente (`.gitkeep`).
-- **Nommage du plan de série en transition** : trois conventions coexistent dans les livres
-  amorcés : Jacques `00 - Introduction/Serie.md/.pdf`, Actes `00 - Introduction/Série - Actes.md/.pdf`,
-  Luc `00 - Introduction/Serie-de-Predications-Luc---venu-sauver-les-perdus.md/.pdf`. À uniformiser
-  (référence proposée : `Serie.md/.pdf`).
+- **État** : `59 - Jacques` est complet (12 péricopes + site de présentation) ; `48 - Galates`,
+  `42 - Luc` et `44 - Actes` ont leur `00 - Introduction/` (recherche globale + série ; Galates :
+  série de 23 semaines, sans péricopes ni `index.html` encore) ; les 23 autres dossiers n'ont pour
+  l'instant que leurs fichiers de référence `NEG - <Livre>.md` et `JMA - <Livre>.md` (extraits pour
+  les 27 livres ; le `.gitkeep` subsiste). Feuille de route d'ensemble : `PRD-Recherche-Serie.md`.
+- **Nommage du plan de série** : nom canonique unique `00 - Introduction/Serie.md/.pdf`, **déjà
+  appliqué** aux quatre livres amorcés ; l'ancienne dette de nommage (conventions `Série - Actes`
+  et `Serie-de-Predications-Luc-…`) est résorbée.
 
 ## Planifier la série (`sermon-series`)
 
@@ -229,6 +230,8 @@ Chaque dossier de péricope garde **trois fichiers cohérents** : `.md` (source)
 - `generate-pdf.py` (fourni par le skill `sermon-JMA`, **non versionné dans ce dépôt**) exige
   `reportlab` (`pip install reportlab`). Le skill `sermon-series` peut laisser un artefact
   transitoire `serie-de-predications-temp.json` à la racine (à supprimer ou à ignorer).
+- `extract_nt.py` (racine, **versionné**) régénère les 54 fichiers de référence `NEG`/`JMA` des
+  27 livres depuis `NEG - MacArthur.pdf` (séparation des flux par police et taille) ; exige PyMuPDF.
 - `.gitignore` exclut `ruvector.db` (outillage local), les copies Windows `* - Copie*` et
   `.claude/`.
 - **Lire `NEG - MacArthur.pdf`** : contrairement à l'ancien scan, ce PDF **possède une couche de
