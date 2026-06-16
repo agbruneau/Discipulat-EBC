@@ -386,30 +386,30 @@ naturelles**, fixé par `/sermon-series`, jamais d'avance).
 |---|---|---|---|---|---|---|
 | 40 | Matthieu | 28 / 1071 | arc pluriannuel | 120-150 | Réf ✓ | Phase 1 (série, scinder en sous-séries) |
 | 41 | Marc | 16 / 678 | arc pluriannuel | 80-100 | Réf ✓ | Phase 1 |
-| 42 | Luc | 24 / 1151 | arc pluriannuel | 130-160 | Réf ✓ · Glob ✓ · Sér ✓ | Phases 2-3 |
+| 42 | Luc | 24 / 1151 | arc pluriannuel | **129 (réalisé)** | **COMPLET** (J2 ✓ : 129 péricopes × 3 fichiers ; recomposition 1.1→24.53 vérifiée) | Aucune |
 | 43 | Jean | 21 / 879 | arc pluriannuel | 100-130 | Réf ✓ | Phase 1 |
-| 44 | Actes | 28 / 1007 | arc pluriannuel | 110-140 | Réf ✓ · Glob ✓ · Sér ✓ | Phases 2-3 |
+| 44 | Actes | 28 / 1007 | arc pluriannuel | **77 (réalisé)** | **COMPLET** (J2 ✓ : 77 péricopes × 3 fichiers ; recomposition 1.1→28.31 vérifiée) | Aucune |
 | 45 | Romains | 16 / 433 | arc pluriannuel | 60-80 | Réf ✓ | Phase 1 |
 | 46 | 1 Corinthiens | 16 / 437 | arc pluriannuel | 55-70 | Réf ✓ | Phase 1 |
 | 47 | 2 Corinthiens | 13 / 257 | 1 saison longue | 40-50 | Réf ✓ | Phase 1 |
-| 48 | Galates | 6 / 149 | 1 saison | **23 (figé)** | Réf ✓ · Glob ✓ · Sér ✓ | **Phases 2-3** (créer 23 dossiers + recherches + index.html ; logo du 00) |
-| 49 | Éphésiens | 6 / 155 | 1 saison | 24-30 | Réf ✓ | Phase 1 |
-| 50 | Philippiens | 4 / 104 | 1 saison | 16-20 | Réf ✓ | Phase 1 |
-| 51 | Colossiens | 4 / 95 | 1 saison | 14-18 | Réf ✓ | Phase 1 |
-| 52 | 1 Thessaloniciens | 5 / 89 | 1 saison | 12-16 | Réf ✓ | Phase 1 |
-| 53 | 2 Thessaloniciens | 3 / 47 | 1 saison | 8-10 | Réf ✓ | Phase 1 |
-| 54 | 1 Timothée | 6 / 113 | 1 saison | 16-22 | Réf ✓ | Phase 1 |
-| 55 | 2 Timothée | 4 / 83 | 1 saison | 12-16 | Réf ✓ | Phase 1 |
-| 56 | Tite | 3 / 46 | 1 saison | 7-9 | Réf ✓ | Phase 1 |
-| 57 | Philémon | 1 / 25 | 1 saison courte | 3-4 | Réf ✓ | Phase 1 |
+| 48 | Galates | 6 / 149 | 1 saison | **23 (réalisé)** | **COMPLET** (J1 ✓ : 23 péricopes × 3 fichiers ; recomposition 1.1→6.18 vérifiée 2026-06-15) | Aucune (référence aval) |
+| 49 | Éphésiens | 6 / 155 | 1 saison | **24 (réalisé)** | **COMPLET** (J3 : 24 péricopes × 3 fichiers ; intro ; recomposition 1.1→6.24 vérifiée) | Aucune |
+| 50 | Philippiens | 4 / 104 | 1 saison | **15 (réalisé)** | **COMPLET** (J3 : 15 péricopes × 3 fichiers ; intro ; recomposition 1.1→4.23 vérifiée) | Aucune |
+| 51 | Colossiens | 4 / 95 | 1 saison | **14 (réalisé)** | **COMPLET** (J3 : 14 péricopes × 3 fichiers ; intro ; recomposition 1.1→4.18 vérifiée) | Aucune |
+| 52 | 1 Thessaloniciens | 5 / 89 | 1 saison | **11 (réalisé)** | **COMPLET** (J3 : 11 péricopes × 3 fichiers ; intro ; recomposition 1.1→5.28 vérifiée) | Aucune |
+| 53 | 2 Thessaloniciens | 3 / 47 | 1 saison | **7 (réalisé)** | **COMPLET** (J3 : 7 péricopes × 3 fichiers ; intro ; recomposition 1.1→3.18 vérifiée) | Aucune |
+| 54 | 1 Timothée | 6 / 113 | 1 saison | **18 (réalisé)** | **COMPLET** (J3 : 18 péricopes × 3 fichiers ; intro ; recomposition 1.1→6.21 vérifiée) | Aucune |
+| 55 | 2 Timothée | 4 / 83 | 1 saison | **13 (réalisé)** | **COMPLET** (J3 : 13 péricopes × 3 fichiers ; intro ; recomposition 1.1→4.22 vérifiée) | Aucune |
+| 56 | Tite | 3 / 46 | 1 saison | **8 (réalisé)** | **COMPLET** (J3 : 8 péricopes × 3 fichiers ; intro ; recomposition 1.1→3.15 vérifiée) | Aucune |
+| 57 | Philémon | 1 / 25 | 1 saison courte | **4 (réalisé)** | **COMPLET** (J3 : 4 péricopes × 3 fichiers ; intro index.html ajouté 2026-06-15 ; recomposition 1.1→1.25 vérifiée) | Aucune |
 | 58 | Hébreux | 13 / 303 | arc pluriannuel | 45-60 | Réf ✓ | Phase 1 |
 | 59 | Jacques | 5 / 108 | 1 saison | **12 (réalisé)** | **COMPLET** (gabarit d'or) | Aucune (référence) |
-| 60 | 1 Pierre | 5 / 105 | 1 saison | 16-20 | Réf ✓ | Phase 1 |
-| 61 | 2 Pierre | 3 / 61 | 1 saison | 10-12 | Réf ✓ | Phase 1 |
-| 62 | 1 Jean | 5 / 105 | 1 saison | 16-20 | Réf ✓ | Phase 1 |
-| 63 | 2 Jean | 1 / 13 | 1 saison courte | 2-3 | Réf ✓ | Phase 1 |
-| 64 | 3 Jean | 1 / 14 | 1 saison courte | 2-3 | Réf ✓ | Phase 1 |
-| 65 | Jude | 1 / 25 | 1 saison courte | 4-5 | Réf ✓ | Phase 1 |
+| 60 | 1 Pierre | 5 / 105 | 1 saison | **17 (réalisé)** | **COMPLET** (J3 : 17 péricopes × 3 fichiers ; intro ; recomposition 1.1→5.14 vérifiée) | Aucune |
+| 61 | 2 Pierre | 3 / 61 | 1 saison | **10 (réalisé)** | **COMPLET** (J3 : 10 péricopes × 3 fichiers ; intro ; recomposition 1.1→3.18 vérifiée) | Aucune |
+| 62 | 1 Jean | 5 / 105 | 1 saison | **16 (réalisé)** | **COMPLET** (J3 : 16 péricopes × 3 fichiers ; intro ; recomposition 1.1→5.21 vérifiée) | Aucune |
+| 63 | 2 Jean | 1 / 13 | 1 saison courte | **4 (réalisé)** | **COMPLET** (J3 : 4 péricopes × 3 fichiers ; intro ; recomposition 1.1→1.13 vérifiée) | Aucune |
+| 64 | 3 Jean | 1 / 15 | 1 saison courte | **4 (réalisé)** | **COMPLET** (J3 : 4 péricopes × 3 fichiers ; intro ; recomposition 1.1→1.15 vérifiée) | Aucune |
+| 65 | Jude | 1 / 25 | 1 saison courte | **7 (réalisé)** | **COMPLET** (J3 : 7 péricopes × 3 fichiers ; intro ; recomposition 1.1→1.25 vérifiée) | Aucune |
 | 66 | Apocalypse | 22 / 404 | arc pluriannuel | 50-70 | Réf ✓ | Phase 1 |
 
 > Les comptes de versets sont indicatifs (NEG). Les estimations de semaines servent au
@@ -422,9 +422,9 @@ naturelles**, fixé par `/sermon-series`, jamais d'avance).
 
 | Jalon | Contenu | Critère de sortie |
 |---|---|---|
-| J1 | Achèvement de **Galates** (phases 2-3) | 23 péricodes complètes + recomposition vérifiée |
-| J2 | **Luc** et **Actes** complétés + noms de série uniformisés | 2 livres conformes au § 10.4 |
-| J3 | **Épîtres d'une saison** (12 livres, § 12.1 pt 3) | 12 livres conformes |
+| J1 | Achèvement de **Galates** (phases 2-3) | 23 péricodes complètes + recomposition vérifiée — **✅ ATTEINT (constaté 2026-06-15)** |
+| J2 | **Luc** et **Actes** complétés + noms de série uniformisés | 2 livres conformes au § 10.4 — **✅ ATTEINT** (Luc 129/129 recomposition 1.1→24.53 ; Actes 77/77 recomposition 1.1→28.31 ; détail dans `PRD-FollowUp.md`) |
+| J3 | **Épîtres d'une saison** (15 livres distincts, § 12.1 pt 3 ; le « 12 » antérieur était un compte périmé) | 15 livres conformes — **✅ ATTEINT (15/15, constaté 2026-06-16)** : Philémon, 2 Jean, 3 Jean, Jude, Tite, 2 Thess, Colossiens, Philippiens, 1 Thess, 1 Timothée, 2 Timothée, 1 Pierre, 2 Pierre, 1 Jean, Éphésiens |
 | J4 | **Pauliniennes majeures + Hébreux** | Romains, 1-2 Co, Hébreux conformes |
 | J5 | **Évangiles + Apocalypse** (arcs pluriannuels) | Matthieu, Marc, Jean, Apocalypse conformes |
 | J6 | **Clôture NT** | Les 27 livres satisfont le § 10.5 |

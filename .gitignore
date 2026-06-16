@@ -6,3 +6,7 @@ ruvector.db
 
 # Outillage local Claude Code (config propre à la machine, verrous transitoires)
 .claude/
+
+# Cache de bytecode Python (artefacts de build)
+__pycache__/
+*.pyc
