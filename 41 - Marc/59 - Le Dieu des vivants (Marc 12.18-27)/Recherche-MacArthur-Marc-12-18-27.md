@@ -70,10 +70,6 @@ Jésus se déclare lui-même la résurrection et la vie. Ce que Marc 12 défend 
 
 Le tombeau vide et la déclaration il est ressuscité scellent par le fait ce que Jésus établit ici par l'Écriture. La résurrection qu'il défend devant les sadducéens est confirmée par sa propre victoire sur la mort, signe suprême de sa déité.
 
-**Romains 13.1-7** · _Lien thématique_
-
-Prolonge la controverse précédente sur l'impôt à César (Mc 12.17), où Jésus enseignait le devoir de soumission au pouvoir civil. Situe l'affrontement avec les sadducéens dans la série des pièges où chaque réponse de Jésus manifeste son autorité.
-
 ## Thèmes théologiques
 
 ### L'autorité inerrante et suffisante de l'Écriture
