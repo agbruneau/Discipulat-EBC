@@ -5,6 +5,19 @@ complétée**. Source de vérité de l'avancement du programme (les 27 livres du
 
 **Dernière mise à jour : 2026-06-20** — **🎉 PROGRAMME COMPLET : J1 → J6 TOUS ✅. Les 27 livres du NT sont achevés (848 péricopes + 27 pages d'accueil), recomposition 1.1→fin vérifiée, conformité doctrinale MacArthur, 0 tiret cadratin sur 1831 fichiers.** · **AGB** · **EBC**
 
+**Validation de conformité doctrinale (revue 2026-06-20)** : audit indépendant de la **totalité des
+jalons J4 et J5** (8 livres, 435 péricopes : Romains 47, 1 Corinthiens 55, 2 Corinthiens 42,
+Hébreux 39, Matthieu 89, Marc 82, Jean 53, Apocalypse 28) confronté au cadre théologique de John
+MacArthur et au `NEG - MacArthur.pdf`. Méthode : balayage des marqueurs des positions réfutées sur
+l'ensemble des fichiers, puis audit doctrinal par livre (sections « Apports des commentateurs » et
+« Thèmes théologiques ») avec relecture renforcée des flashpoints (justification forensique et double
+imputation, élection inconditionnelle, persévérance des saints, distinction Israël / Église,
+prémillénarisme littéral d'Ap 20, 144 000 = Israël, cessationnisme strict, passages d'avertissement
+d'Hébreux lus comme apostats non régénérés, déité johannique, expiation substitutive de Mc 10.45,
+futurisme du discours des Oliviers). **Résultat : conformité intégrale à la théologie de MacArthur,
+0 écart doctrinal ; 0 tiret cadratin et 0 anglicisme « covenant » en prose dans le périmètre.** ·
+**AGB** · **EBC**
+
 > Convention d'état : `✓` fait et vérifié · `◻` à faire · `~` en cours · `s.o.` sans objet.
 > Une activité n'est cochée qu'après **vérification par constat** (gabarit + conformité doctrinale) :
 > 7 sections · 5 mots-clés × 5 traductions · renvois typés · thèmes à deux volets · 5-7 pistes ·
