@@ -5,8 +5,7 @@ Charlesbourg** (Québec ; pasteur Simon Ouellette). Le matériel soutient des ex
 (*lectio continua*), livre par livre, avec une série de prédications par livre. Le **Nouveau
 Testament est couvert en entier** (27 livres) ; des **séries de l'Ancien Testament** s'y ajoutent.
 `README.md` donne la vue d'ensemble publique ; ce fichier ne couvre que ce qui n'est **pas
-dérivable** du dépôt. L'**avancement vivant** est tenu dans `PRD-FollowUp.md` ; la **chaîne de
-production** dans `PRD-Recherche-Serie.md`.
+dérivable** du dépôt.
 
 Numérotation des dossiers : ordre canonique des **66 livres** de la Bible protestante (39 AT + 27
 NT), de `01 - Genèse` à `66 - Apocalypse`. Les livres du NT vont de **40 (Matthieu) à 66
@@ -137,8 +136,6 @@ conformité** de tout le contenu.
 ```
 Biblique/
   README.md  CLAUDE.md
-  PRD-Recherche-Serie.md        Chaîne de production (exigences)
-  PRD-FollowUp.md               Suivi vivant de l'avancement (source de vérité de l'état)
   00 - Avant-propos/            Fondations du dépôt
     NEG - MacArthur.pdf         La Bible d'étude MacArthur (NEG, 2216 p.) : RÉFÉRENCE de conformité (AT + NT)
     Confession de foi-EBC.pdf   Confession de foi de l'Église (rév. 2016)
@@ -170,14 +167,13 @@ Biblique/
   **fondé exclusivement sur `NEG - MacArthur.pdf`** (`NEG -` = texte NEG ; `JMA -` = notes
   d'étude). Ne jamais y mêler une autre version biblique, un autre commentaire, ni un contenu tiré
   de la mémoire ou d'une source externe.
-- **État** : voir `PRD-FollowUp.md` (vivant). En résumé : NT complet (27/27, 848 péricopes) ; AT en
-  cours (Genèse 1-11 et Psaume 19 complets, Psaume 119 en production). `59 - Jacques` est le
-  **gabarit d'or** (structure + visuel).
+- **État** : NT complet (27/27 livres, 848 péricopes) ; AT : Genèse 1-11, Psaume 19 et Psaume 119
+  complets. `59 - Jacques` est le **gabarit d'or** (structure et visuel) sur lequel modeler tout
+  nouveau livre.
 
 ## Produire le contenu
 
-La chaîne complète (phases, critères d'acceptation, gabarits de prompt, orchestration par workflow)
-est spécifiée dans `PRD-Recherche-Serie.md`. En bref, par livre :
+Pour tout nouveau livre, la chaîne de production se déroule ainsi :
 
 - **Série** (`00 - Introduction/Serie.md/.pdf`) : skill **`sermon-series`**. Exposition suivie
   **complète**, semaine par semaine, couvrant **l'intégralité du livre** en *lectio continua*,

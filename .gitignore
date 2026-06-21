@@ -10,3 +10,7 @@ ruvector.db
 # Cache de bytecode Python (artefacts de build)
 __pycache__/
 *.pyc
+
+# Artefacts transitoires des skills sermon-* (JSON intermédiaires)
+_temp.json
+serie-de-predications-temp.json

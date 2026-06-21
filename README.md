@@ -2,7 +2,8 @@
 
 > Ressource d'étude biblique et de préparation de prédication pour l'**Église Baptiste de
 > Charlesbourg** (Québec ; pasteur Simon Ouellette). Le **Nouveau Testament est couvert en entier**
-> (27 livres), et un ensemble croissant de **séries de l'Ancien Testament** s'y ajoute.
+> (27 livres), complété par des **séries de l'Ancien Testament** (Genèse 1-11, Psaume 19, Psaume
+> 119).
 
 Ce dépôt rassemble le matériel produit pour des **expositions suivies** (*lectio continua*),
 livre par livre. Pour chaque livre traité : un **plan de série de prédications**, une **recherche
@@ -93,15 +94,15 @@ globale, une page d'accueil et **toutes les péricopes** (recherche `.md`, expor
 L'épître de **Jacques** (12 péricopes plus site de présentation) est le **gabarit de référence**
 (structure et système visuel) sur lequel les autres livres ont été modelés.
 
-### Ancien Testament : séries en cours
+### Ancien Testament : séries complètes
 
-Des séries de l'Ancien Testament sont amenées au même niveau d'achèvement que le NT.
+Des séries de l'Ancien Testament ont été amenées au même niveau d'achèvement que le NT.
 
 | # | Livre / portée | Série | Péricopes | État |
 |---|---|---|---|---|
 | 01 | Genèse 1 à 11 (« De Babel à Abraham ») | ✓ | 12 | Complet |
 | 19 | Psaume 19 (« Dieu a parlé ») | ✓ | 4 | Complet |
-| 19 | Psaume 119 (« Une lampe à mes pieds ») | ✓ | 22 (par strophes) | En production |
+| 19 | Psaume 119 (« Une lampe à mes pieds ») | ✓ | 22 (par strophes) | Complet |
 
 ---
 
@@ -179,8 +180,6 @@ une connexion Internet améliore le rendu, mais la page reste lisible hors ligne
 .
 ├── README.md
 ├── CLAUDE.md
-├── PRD-Recherche-Serie.md                    Document d'exigences (chaîne de production)
-├── PRD-FollowUp.md                           Tableau de suivi vivant de l'avancement
 │
 ├── 00 - Avant-propos/                        Fondations : références, doctrine, piété, outillage
 │   ├── NEG - MacArthur.pdf                    La Bible d'étude MacArthur (NEG) : arbitre de conformité
