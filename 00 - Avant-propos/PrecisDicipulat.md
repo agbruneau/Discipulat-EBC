@@ -51,6 +51,8 @@ Les sources affirment justement que « *le discipulat ne se vit jamais en isolat
 
 ---
 
+<!-- pagebreak -->
+
 ## 5. Transmission : mentorat et multiplication
 
 L'axe de « reproduction spirituelle » et les quatre engagements du mentor : 

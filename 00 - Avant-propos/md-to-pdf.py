@@ -16,7 +16,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable,
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, PageBreak,
 )
 
 # Palette maison (extraite de 59 - Jacques/00 - Introduction/index.html)
@@ -132,6 +132,8 @@ def build(md_path, pdf_path):
             story.append(Paragraph(inline(line[3:]), S["h2"]))
             story.append(HRFlowable(width="100%", thickness=0.8, color=ORANGE,
                                     spaceBefore=1, spaceAfter=6))
+        elif line.strip() == "<!-- pagebreak -->":
+            story.append(PageBreak())
         elif line.strip() == "---":
             pass  # les filets de section sont portes par les en-tetes
         elif line.startswith(">"):
