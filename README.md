@@ -53,9 +53,13 @@ toutes les séries.
   par le mentorat, en vue de la conformité à Christ. Cadre MacArthur, sources documentées.
 - **[`Coram Christo.pdf`](<00 - Avant-propos/Coram Christo.pdf>)** : ressource d'accompagnement
   pastoral (une page).
-- **[`Vallée de la Vision.pdf`](<00 - Avant-propos/Vallée de la Vision.pdf>)** : *La Vallée de la
-  Vision*, le recueil de prières et de méditations puritaines (édition française, Publications
-  Chrétiennes, 2023), soutien de la vie de prière personnelle et pastorale.
+- **[`Vallée de la Vision/`](<00 - Avant-propos/Vallée de la Vision>)** : *La Vallée de la Vision*
+  (`Vallée de la Vision.pdf`), le recueil de prières et de méditations puritaines (édition
+  française, Publications Chrétiennes, 2023), soutien de la vie de prière personnelle et pastorale,
+  accompagné d'une étude biblique PowerPoint (`La-Vallee-de-la-Vision-Etude-biblique.pptx`).
+- **[`Puritains/`](<00 - Avant-propos/Puritains>)** : ressources complémentaires sur la
+  spiritualité puritaine, une synthèse (`Synthèse - Puritains.docx`) et une présentation
+  (`Puritain - Toute la vie pour la gloire de Dieu.pptx`).
 
 ### Outillage de production
 
@@ -194,7 +198,8 @@ une connexion Internet améliore le rendu, mais la page reste lisible hors ligne
 │   ├── Confession de foi-EBC.pdf             Confession de foi de l'Église (rév. 2016)
 │   ├── PrecisDicipulat.md / .pdf             Précis du discipulat chrétien
 │   ├── Coram Christo.pdf                     Ressource d'accompagnement pastoral
-│   ├── Vallée de la Vision.pdf               Recueil de prières puritaines
+│   ├── Vallée de la Vision/                  Recueil de prières puritaines (PDF + étude PowerPoint)
+│   ├── Puritains/                            Ressources complémentaires sur les puritains
 │   └── extract_nt.py, extract_at.py, md-to-pdf.py   Outillage de production
 │
 ├── 01 - Genèse/                              Ancien Testament : Genèse 1 à 11 (série complète)
