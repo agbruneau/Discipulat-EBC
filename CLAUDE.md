@@ -143,7 +143,7 @@ Biblique/
     PrecisDicipulat.md / .pdf   Précis du discipulat chrétien
     Coram Christo.pdf           Ressource d'accompagnement pastoral
     Vallée de la Vision/        Recueil de prières puritaines (PDF + étude PowerPoint)
-    Puritains/                  Ressources complémentaires sur les puritains (PowerPoint + synthèse)
+    Puritains/                  Ressources complémentaires sur les puritains (essai + PowerPoint + synthèse)
     extract_nt.py extract_at.py md-to-pdf.py   Outillage de production
   NN - <Livre>/                 Dossiers de livre (01 - Genèse … 66 - Apocalypse)
     NEG - <Livre>.md            texte biblique NEG 1979 (péricopes, renvois marginaux, versets numérotés)

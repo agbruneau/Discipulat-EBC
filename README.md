@@ -58,7 +58,8 @@ toutes les séries.
   française, Publications Chrétiennes, 2023), soutien de la vie de prière personnelle et pastorale,
   accompagné d'une étude biblique PowerPoint (`La-Vallee-de-la-Vision-Etude-biblique.pptx`).
 - **[`Puritains/`](<00 - Avant-propos/Puritains>)** : ressources complémentaires sur la
-  spiritualité puritaine, une synthèse (`Synthèse - Puritains.docx`) et une présentation
+  spiritualité puritaine, un essai (`Essai - Les puritains.docx`), une synthèse
+  (`Synthèse - Puritains.docx`) et une présentation
   (`Puritain - Toute la vie pour la gloire de Dieu.pptx`).
 
 ### Outillage de production
